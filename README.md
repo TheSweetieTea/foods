@@ -1,4 +1,4 @@
-### Инструкция
+# Инструкция
 
 ## Технологии
 Python 3.12
@@ -37,4 +37,9 @@ python3 manage.py migrate
 - В папке с файлом manage.py выполните команду:
 ```
 python3 manage.py runserver
+```
+## Тестирование
+- В папке с файлом manage.py выполните команду:
+```
+python3 manage.py test
 ```
