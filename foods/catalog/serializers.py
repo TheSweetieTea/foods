@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from food.models import Food, FoodCategory
+from catalog.models import Food, FoodCategory
 
 
 class FoodSerializer(serializers.ModelSerializer):

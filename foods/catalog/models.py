@@ -1,7 +1,10 @@
 from django.db import models
+from catalog.managers import CategoryManager
 
 
 class FoodCategory(models.Model):
+    objects = CategoryManager()
+
     name_ru = models.CharField(
         verbose_name='Название на русском',
         max_length=255,
