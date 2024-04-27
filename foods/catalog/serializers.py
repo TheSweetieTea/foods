@@ -23,6 +23,12 @@ class FoodSerializer(serializers.ModelSerializer):
             'cost',
             'additional'
         )
+        read_only_fields = fields
+
+    @staticmethod
+    def setup_eager_loading(queryset):
+        queryset = queryset.prefetch_related('food')
+        return queryset
 
 
 class FoodListSerializer(serializers.ModelSerializer):
@@ -35,3 +41,4 @@ class FoodListSerializer(serializers.ModelSerializer):
     class Meta:
         model = FoodCategory
         fields = ('id', 'name_ru', 'name_en', 'name_ch', 'order_id', 'foods')
+        read_only_fields = fields
